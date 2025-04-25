@@ -22,6 +22,10 @@ function App() {
     checkAuth();
   }, [checkAuth]);
 
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+  
 
 
   if (isCheckingAuth && !authUser) {
